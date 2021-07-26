@@ -1,0 +1,149 @@
+<html>
+
+<head>
+
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+
+
+// Set the date we're counting down to
+var countDownDate = new Date().getTime()+600000;
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+// Get todays date and time
+var now = new Date().getTime();
+
+// Find the distance between now an the count down date
+var distance = countDownDate - now;
+
+// Time calculations for hours, minutes and seconds
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+// Display the result in the element with id="demo"
+document.getElementById("demo").innerHTML =minutes + "m " + seconds + "s left " ;
+
+// If the count down is finished, write some text
+if (distance < 0) {
+
+clearInterval(x);
+document.getElementById("demo").innerHTML = "THANK YOU";
+}
+}, 1000);
+</script>
+
+</head>
+
+<body onload="setTimeout('document.b2.submit();', 600000);">
+
+<form name="b2" action = "java.py" method = "post" target = "_blank">
+
+<input type = "submit" value = "1.What is the range of short data type in Java?" />
+<input type = "radio" name = "1" value = "0" /> a) -128 to 127
+<input type = "radio" name = "1" value = "10" /> b) -32768 to 32767
+<input type = "radio" name = "1" value = "0" /> c) -2147483648 to 2147483647
+<input type = "radio" name = "1" value = "0" /> d) None of the mentioned.
+<div style="visibility:hidden"> <input type="radio" name="1" value="0" checked> </div>
+<br />
+
+<input type = "submit" value = "2. Which of these keywords is used to manually throw an exception?
+" />
+<input type = "radio" name = "2" value = "10" />a)try
+<input type = "radio" name = "2" value = "0" />b)finally
+<input type = "radio" name = "2" value = "0" />c)throw
+<input type = "radio" name = "2" value = "0" />d)catch
+<div style="visibility:hidden"> <input type="radio" name="2" value="0" checked> </div>
+<br />
+
+<input type = "submit" value = "3.Which of these is an incorrect array declaration?" />
+<input type = "radio" name = "3" value = "0" />a) int arr[] = new int[5] ;
+<input type = "radio" name = "3" value = "0" />b) int [] arr = new int[5] ;
+<input type = "radio" name = "3" value = "0" />c) int arr[];
+<input type = "radio" name = "3" value = "10" />d) int arr[] = int [5] new;
+<div style="visibility:hidden"> <input type="radio" name="3" value="0" checked> </div>
+<br />
+
+
+<input type = "submit" value = "4.What is the output of this program?
+1.	    class operators 
+2.	    {
+3.	        public static void main(String args[])
+4.	        {
+5.	            int var1 = 5; 
+6.	            int var2 = 6;
+7.	            int var3;
+8.	            var3 = ++ var2 * var1 / var2 + var2;
+9.	            System.out.print(var3);
+10.	        } 
+11.	    }
+" />
+<input type = "radio" name = "4" value = "0" /> a)10
+<input type = "radio" name = "4" value = "0" /> b)11
+<input type = "radio" name = "4" value = "10" /> c)12
+<input type = "radio" name = "4" value = "0" />d)56
+<div style="visibility:hidden"> <input type="radio" name="4" value="0" checked> </div>
+<br />
+
+<input type = "submit" value =  "5.What is the output of this program?<br/>
+1.	    class operators 
+2.	    {
+3.	        public static void main(String args[]) 
+4.	        {    
+5.	             int x = 8;
+6.	             System.out.println(++x * 3 + " " + x);
+7.	        } 
+8.	    }
+"/>
+<input type = "radio" name = "5" value = "0" />a) 24 8
+<input type = "radio" name = "5" value = "0" />b) 24 9 
+<input type = "radio" name = "5" value = "0" />c) 27 8 
+<input type = "radio" name = "5" value = "10" />d) 27 9
+<div style="visibility:hidden"> <input type="radio" name="5" value="0" checked> </div>
+<br />
+
+<input type = "submit" value = "6.Which component is responsible to optimize bytecode to machine code?" />
+<input type = "radio" name = "6" value = "0" /> a) JVM
+<input type = "radio" name = "6" value = "0" /> b) JDK
+<input type = "radio" name = "6" value = "10" /> c) JIT
+<input type = "radio" name = "6" value = "0" />d) JRE
+<div style="visibility:hidden"> <input type="radio" name="6" value="0" checked> </div>
+<br />
+<input type = "submit" value = "7. Which statement is true about java?" />
+<input type = "radio" name = "7" value = "10" />a) Platform independent programming language
+<input type = "radio" name = "7" value = "0" /> b) Platform dependent programming language 
+<input type = "radio" name = "7" value = "0" /> c) Platform dependent programming language
+<input type = "radio" name = "7" value = "0" />d)Sequence dependent programming language
+<div style="visibility:hidden"> <input type="radio" name="7" value="0" checked> </div>
+<br />
+
+<input type = "submit" value = "8.Which of these can be overloaded?" />
+<input type = "radio" name = "8" value = "0" />a) Methods 
+<input type = "radio" name = "8" value = "0" />b) Constructors 
+<input type = "radio" name = "8" value = "10" /> c) All of the mentioned
+<input type = "radio" name = "8" value = "0" />d) None of the mentioned
+<div style="visibility:hidden"> <input type="radio" name="8" value="0" checked> </div>
+<br />
+<input type = "submit" value = "9.Which of these is correct about passing an argument by call-by-value process?" />
+<input type = "radio" name = "9" value = "10" />a) Copy of argument is made into the formal parameter of the subroutine 
+<input type = "radio" name = "9" value = "0" />b) Reference to original argument is passed to formal parameter of the subroutine 
+<input type = "radio" name = "9" value = "0" />c) Copy of argument is made into the formal parameter of the subroutine and changes made on parameters of subroutine have effect on original argument
+<input type = "radio" name = "9" value = "0" />d) Reference to original argument is passed to formal parameter of the subroutine and changes made on parameters of subroutine have effect on original argument
+<div style="visibility:hidden"> <input type="radio" name="9" value="0" checked> </div>
+<br />
+<input type = "submit" value = "10.What is the process of defining a method in terms of itself, that is a method that calls itself?" />
+<input type = "radio" name = "10" value = "0" /> a)Polymorphism
+<input type = "radio" name = "10" value = "0" /> b)Abstraction
+<input type = "radio" name = "10" value = "0" /> c)Encapsulation
+<input type = "radio" name = "10" value = "10" />d) Recursion
+<div style="visibility:hidden"> <input type="radio" name="10" value="0" checked> </div>
+<input type="submit" value="Submit">
+<br/>
+
+</form>
+</body>
+</html>
